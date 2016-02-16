@@ -14,3 +14,18 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('edit-post/{id}', function ($id) {
+
+    Auth::loginUsingId(1);
+
+    $post = \App\Post::findOrFail($id);
+
+    if (Gate::denies('update-post', $post)) {
+//        abort(403);
+        return redirect('/');
+    }
+
+    return $post->title;
+
+});
