@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5c6026b96e6fa11a641b51a6ba976f5e",
-    "content-hash": "5bd58fd976f1ee3e9611bc37c006ec46",
+    "hash": "8f511326a85ec0851c949ad41af1a7e0",
+    "content-hash": "180071721eb59eb389d255bbbe6a0071",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -491,6 +491,56 @@
             "time": "2016-02-02 14:56:40"
         },
         {
+            "name": "laravelcollective/html",
+            "version": "v5.1.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LaravelCollective/html.git",
+                "reference": "f62269629b2a1093039733517bd7e75b3f98dffb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/f62269629b2a1093039733517bd7e75b3f98dffb",
+                "reference": "f62269629b2a1093039733517bd7e75b3f98dffb",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/http": "5.1.*",
+                "illuminate/routing": "5.1.*",
+                "illuminate/session": "5.1.*",
+                "illuminate/support": "5.1.*",
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9",
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Collective\\Html\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                },
+                {
+                    "name": "Adam Engebretson",
+                    "email": "adam@laravelcollective.com"
+                }
+            ],
+            "time": "2015-11-28 08:27:09"
+        },
+        {
             "name": "league/flysystem",
             "version": "1.0.16",
             "source": {
@@ -950,6 +1000,47 @@
                 "shell"
             ],
             "time": "2015-11-12 16:18:56"
+        },
+        {
+            "name": "styde/html",
+            "version": "1.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/StydeNet/html.git",
+                "reference": "2d521cfe5e81ff10f76e7221e9e1f45aa81731b3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/StydeNet/html/zipball/2d521cfe5e81ff10f76e7221e9e1f45aa81731b3",
+                "reference": "2d521cfe5e81ff10f76e7221e9e1f45aa81731b3",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.*",
+                "laravelcollective/html": "5.*",
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "~2.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Styde\\Html\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Duilio Palacios",
+                    "email": "admin@styde.net"
+                }
+            ],
+            "description": "Build form fields, menus, alert messages and other view components quickly",
+            "time": "2015-08-31 21:43:59"
         },
         {
             "name": "swiftmailer/swiftmailer",
