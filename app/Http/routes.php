@@ -11,6 +11,8 @@
 |
 */
 
+Auth::loginUsingId(11);
+
 Route::get('/', function () {
     return view('welcome');
 });

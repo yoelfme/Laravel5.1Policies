@@ -22,7 +22,11 @@
                     <td>{{ $post->title }}</td>
                     <td>{{ $post->user->name }}</td>
                     <td>
-                        <a href="{{ url('edit-post', [$post->id]) }}">Editar</a>
+                        @can('update-posts', $post)
+                            <a href="{{ url('edit-post', [$post->id]) }}">Editar</a>
+                        @else
+                            <a href="#">Reportar post</a>
+                        @endcan
                     </td>
                 </tr>
             @endforeach
