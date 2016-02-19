@@ -39,7 +39,7 @@ class User extends Model implements AuthenticatableContract,
 
     public function isAdmin()
     {
-        return $this->email == 'yoel@mail2.com';
+        return $this->email == 'yoel2@mail.com';
     }
 
     public function isAuthor(Post $post)
