@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Post;
+use App\Policies\PostPolicy;
 use Illuminate\Contracts\Auth\Access\Gate as GateContract;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
@@ -13,7 +15,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        'App\Model' => 'App\Policies\ModelPolicy',
+        Post::class => PostPolicy::class
     ];
 
     /**
@@ -25,9 +27,5 @@ class AuthServiceProvider extends ServiceProvider
     public function boot(GateContract $gate)
     {
         parent::registerPolicies($gate);
-
-        $gate->define('update-post', function ($user, $post) {
-            return $user->isAdmin() || $user->isAuthor($post);
-        });
     }
 }
